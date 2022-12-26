@@ -38,7 +38,7 @@ router.get("/api/test", (req, res) => {
 
 try {
     app.listen(process.env.PORT || 8000, () => {
-        console.log(`Server started on port:${config.PORT}`);
+        console.log(`Server started on port:${process.env.PORT || 8000}`);
     });
 } catch (e) {
     console.log(e);

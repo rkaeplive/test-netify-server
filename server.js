@@ -28,7 +28,8 @@ const allowCrossDomain = function (req, res, next) {
 };
 app.use(allowCrossDomain);
 app.use(express.static(__dirname + "/UserModels"));
-app.use("/api/test", (req, res) => {
+const router = express.Router();
+router.get("/api/test", (req, res) => {
     // pool.query(
     //     `SELECT * FROM ${config.DB_SCHEMA}.projects`
     // );
